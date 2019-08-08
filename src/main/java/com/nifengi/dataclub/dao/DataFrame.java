@@ -2,13 +2,14 @@ package com.nifengi.dataclub.dao;
 
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@EntityListeners(AuditingEntityListener.class)
 public class DataFrame {
 
     @Id
@@ -16,6 +17,8 @@ public class DataFrame {
     private long id;
     private String name;
     private  String username;
+    @CreatedDate
+    @Column(name = "create_time")
     private Date createTime;
     private String url;
     private String description;

@@ -17,25 +17,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    //返回主页
-    @RequestMapping("index")
-    public String index(@CookieValue(defaultValue = "") String email, Model model){
-        model.addAttribute("name",email);
-        return "index";
-    }
 
-
-    //后台管理页面
-    @RequestMapping("admin")
-    public String admin(){
-        return "admin";
-    }
-
-    //注册页面
-    @RequestMapping("register")
-    public String UserRegister(){
-        return "register";
-    }
 
 
     //保存用户信息
@@ -43,16 +25,15 @@ public class UserController {
     public  String userSave(User user){
        User result= userService.userSave(user);
        if(result !=null){
-           return "index";
+           return "redirect:index";
        }else{
            return null;
        }
     }
 
-    @RequestMapping("login")
-    public String login(){
-        return "login";
-    }
+
+
+
 
 
     //登录
@@ -64,7 +45,7 @@ public class UserController {
         if(result){
             Cookie cookie = new Cookie("email",email);
             response.addCookie(cookie);
-            return "index";
+            return "redirect:index";
         }else{
             return null;
         }

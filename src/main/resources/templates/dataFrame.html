@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/bootstrap.css}" href="../static/css/bootstrap.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="col-md-12 column">
+                <h1>
+                    h3. 这是一套可视化布局系统.
+                </h1>
+            </div>
+            <br>
+            <br>
+            <h5 class="page-header"></h5>
+            <h3>背景描述</h3>
+            <br>
+            <p th:text="${dataFrame.description}">
+                背景描述
+            </p>
+            <h3>数据说明</h3>
+            <br>
+            <p th:text="${dataFrame.description}">
+                数据说明
+            </p>
+
+            <h3>数据来源</h3>
+            <br>
+            <p th:text="${dataFrame.url}">
+                链接
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script th:src="@{/js/bootstrap.js}" src="../static/js/bootstrap.js" ></script>
+</body>
+</html>

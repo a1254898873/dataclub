@@ -18,11 +18,11 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="#">数据集管理</a>
+                        <li >
+                            <a href="./admin">数据集管理</a>
                         </li>
-                        <li>
-                            <a href="./userManage">用户管理</a>
+                        <li class="active">
+                            <a href="#">用户管理</a>
                         </li>
 
                     </ul>
@@ -47,11 +47,9 @@
                         名字
                     </th>
                     <th>
-                        时间
+                        邮箱
                     </th>
-                    <th>
-                        提交人
-                    </th>
+
                     <th>
 
                     </th>
@@ -59,28 +57,23 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="d: ${dataFrames}"  >
+                <tr th:each="d: ${user}"  >
 
                     <td th:text="${d.id}">
 
                         1
 
                     </td>
-                    <td >
-                        <a href="#" th:href="${'./dataFrame/' + d.id}" th:text="${d.name}">
-                            TB - Monthly
-                        </a>
+                    <td th:text="${d.name}">
+                        名字
                     </td>
-                    <td th:text="${d.createTime}">
-                        01/04/2012
+                    <td th:text="${d.email}">
+                      邮箱
                     </td>
-                    <td th:text="${d.username}">
-                        Default
-                    </td>
+
                     <td>
-                        <a type="button" class="btn btn-primary btn-xs" href="#" th:href="${'./updateDataFrame/'+d.id}">修改</a>
-                        &nbsp;
-                        <a type="button" class="btn btn-danger btn-xs" href="#" th:href="${'./deleteDataFrame/'+d.id}">删除</a>
+
+                        <a type="button" class="btn btn-danger btn-xs" href="#" th:href="${'./deleteUser/'+d.id}">删除</a>
                     </td>
 
                 </tr>

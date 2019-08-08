@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改数据集</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/bootstrap.css}" href="../static/css/bootstrap.css" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="inputName" class="col-sm-2 control-label">名字</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputName" th:value="${dataFrame.name}"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputdes" class="col-sm-2 control-label">详细描述</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputdes" th:value="${dataFrame.description}" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputUrl" class="col-sm-2 control-label">链接</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputUrl" th:value="${dataFrame.url}" />
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">修改</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script th:src="@{/bootstrap/js/bootstrap.js}" src="../static/js/bootstrap.js"></script>
+</body>
+</html>
