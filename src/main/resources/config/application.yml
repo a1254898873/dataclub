@@ -9,3 +9,6 @@ spring:
       ddl-auto: update
     show-sql: true
 
+admin:
+  email: 1254898873@qq.com
+

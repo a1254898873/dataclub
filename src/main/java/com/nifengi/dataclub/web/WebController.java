@@ -67,19 +67,7 @@ public class WebController {
     }
 
 
-    //更新数据集
-    @RequestMapping("updateDataFrame/{id}")
-    public String updateData(@PathVariable long id,Model model){
-        DataFrame dataFrame = dataFrameService.findOne(id);
-        model.addAttribute("dataFrame",dataFrame);
-        return "updateData";
-    }
 
 
-    //删除数据集
-    @RequestMapping("deleteUser/{id}")
-    public String deleteUser(@PathVariable long id){
-        userService.deleteUser(id);
-        return "user";
-    }
+
 }

@@ -7,22 +7,20 @@
     <link th:href="@{/css/bootstrap.css}" href="../static/css/bootstrap.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="container">
-    <div class="row clearfix">
+<div class="container" style="max-width:800px;margin-top: 50px">
+    <div class="row clearfix" >
         <div class="col-md-12 column">
             <div class="col-md-12 column">
-                <h1>
+                <h1 th:text="${dataFrame.name}">
                     h3. 这是一套可视化布局系统.
                 </h1>
+                <br>
             </div>
             <br>
             <br>
             <h5 class="page-header"></h5>
-            <h3>背景描述</h3>
-            <br>
-            <p th:text="${dataFrame.description}">
-                背景描述
-            </p>
+
+
             <h3>数据说明</h3>
             <br>
             <p th:text="${dataFrame.description}">

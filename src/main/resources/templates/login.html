@@ -7,7 +7,9 @@
     <link th:href="@{/css/bootstrap.css}" href="../static/css/bootstrap.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="container">
+<div class="container" style="max-width:600px;margin-top: 50px">
+    <h3 class="page-header">登录</h3>
+    <div class="well">
     <div class="row clearfix">
         <div class="col-md-12 column">
             <form class="form-horizontal" role="form" method="get" action="./user">
@@ -25,12 +27,13 @@
                 </div>
 
                 <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
+                    <div class="col-sm-offset-2 col-sm-10 text-center">
                         <button type="submit" class="btn btn-default">登录</button>
                     </div>
                 </div>
             </form>
         </div>
+    </div>
     </div>
 </div>
 
